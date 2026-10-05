@@ -1,0 +1,30 @@
+plugins {
+    id 'kotlin-platform-jvm'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+    id 'application'
+}
+
+group 'com.calculadora'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:1.9.0"
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "11"
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "11"
+}
+
+application {
+    mainClass = 'MainKt'
+}
+
